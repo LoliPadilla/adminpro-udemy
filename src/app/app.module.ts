@@ -8,7 +8,11 @@ import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
 import { NopagefoundComponent } from "./pages/nopagefound/nopagefound.component";
 import { RegisterComponent } from "./login/register.component";
+
 import { FormsModule } from "@angular/forms";
+import { ServiceModule } from './services/service.module';
+
+
 
 @NgModule({
   declarations: [
@@ -17,8 +21,9 @@ import { FormsModule } from "@angular/forms";
     NopagefoundComponent,
     RegisterComponent
   ],
-  imports: [FormsModule, PagesModule, BrowserModule, APP_ROUTES],
+  imports: [
+    FormsModule, PagesModule, BrowserModule, APP_ROUTES, ServiceModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
