@@ -1,0 +1,62 @@
+<div class="row animated fadeIn">
+  <div class="col-lg-7">
+    <div class="card">
+      <div class="card card-body">
+        <h3 class="box-title m-b-0">Perfil del Usuario</h3>
+        <p class="text-muted m-b-30 font-13"> nombre usuario </p>
+        <div class="row">
+          <div class="col-sm-12 col-xs-12">
+            <form ngNativeValidator #f="ngForm" (ngSubmit)="guardar(f.value)" class="form p-t-20">
+              <div class="form-group">
+                <label>Nombre de usuario</label>
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="ti-user"></i></div>
+                  <input [ngModel]="usuario.nombre" name="nombre" type="text" id="exampleInputEmail1"
+                    placeholder="Enter Username">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email de usuario</label>
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="ti-email"></i></div>
+                  <input [ngModel]="usuario.email" [disabled]="usuario.google" name="email" type="email"
+                    class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                <i class="fa fa-save"></i>
+                Guardar
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-5">
+    <div class="card">
+      <div class="card card-body">
+        <h3 class="card-title">Fotografia del usuario</h3>
+        <h6 class="card-subtitle">nombre de usuario</h6>
+        <img *ngIf='!imagenTemp' class="w150" [src]="usuario.img | imagen">
+        <img *ngIf='imagenTemp' class="w150" [src]="imagenTemp">
+
+        <input (change)='seleccionImage($event.target.files[0])' type="file">
+
+        <br>
+        <br>
+        <button (click)="cambiarImagen()" [disabled]="!imagenSubir" type="button"
+          class="btn btn-block btn-success waves-effect waves-light m-r-10">
+          <i class="fa fa-save"></i>
+          Actualizar Foto
+        </button>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

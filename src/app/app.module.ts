@@ -9,7 +9,7 @@ import { LoginComponent } from "./login/login.component";
 import { NopagefoundComponent } from "./pages/nopagefound/nopagefound.component";
 import { RegisterComponent } from "./login/register.component";
 
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ServiceModule } from './services/service.module';
 
 
@@ -22,7 +22,7 @@ import { ServiceModule } from './services/service.module';
     RegisterComponent
   ],
   imports: [
-    FormsModule, PagesModule, BrowserModule, APP_ROUTES, ServiceModule],
+    FormsModule, PagesModule, BrowserModule, APP_ROUTES, ServiceModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

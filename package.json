@@ -25,6 +25,7 @@
     "core-js": "^2.4.1",
     "ng2-charts": "^2.2.3",
     "rxjs": "^6.3.3",
+    "sweetalert": "^2.1.2",
     "tslib": "^1.9.0",
     "zone.js": "^0.8.19"
   },
@@ -47,6 +48,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "^3.2.2"
+    "typescript": "~3.1.1"
   }
 }
