@@ -6,7 +6,8 @@ import {
   SharedService,
   SidebarService,
   UsuarioService,
-  SubirArchivoService
+  SubirArchivoService,
+  ModalUploadService
 } from './service.index';
 
 @NgModule({
