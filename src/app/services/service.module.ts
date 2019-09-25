@@ -7,7 +7,9 @@ import {
   SidebarService,
   UsuarioService,
   SubirArchivoService,
-  ModalUploadService
+  ModalUploadService,
+  HospitalService,
+  MedicoService
 } from './service.index';
 
 @NgModule({
